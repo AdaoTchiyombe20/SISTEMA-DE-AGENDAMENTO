@@ -21,12 +21,12 @@ Este projeto é um sistema web para agendamento de consultas online em uma clín
 
 1. Clone o repositório:
     ```bash
-    git clone https://github.com/seu-usuario/seu-repositorio.git
+    git clone https://github.com/AdaoTchiyombe20/SISTEMA-DE-AGENDAMENTO.git
     ```
 2. Importe o banco de dados (`database.sql`) no MySQL.
 3. Configure as credenciais do banco no arquivo `config.php`.
 4. Inicie o servidor Apache e MySQL pelo XAMPP.
-5. Acesse `http://localhost/sistema de agendamento/` no navegador.
+5. Acesse `http://localhost/school/sistema de agendamento/` no navegador.
 
 ## Estrutura do Projeto
 
