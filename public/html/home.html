@@ -1,24 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clínica De Saúde</title>
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
+    <link rel="stylesheet" href="../assets/css/sideBar.css">
+    <script src="../assets/js/sideBar.js" defer></script>
+    <script src="../assets/js/home.js" defer></script>
 </head>
 <body>
-    <div class="sidebar">
-        <div class="head">
 
+   <div class="sideBar">
+        <div class="header">
+            <img src="../assets/img/icons/calendar.svg" alt="calendar icon" class="iconHeader">
+            <div class="info">
+                <h1>Clínica de Saúde</h1>
+                <small class="small">Sistema de agendamento</small>
+            </div>
         </div>
-        <div class="main">
 
-        </div>
+        <hr>
+
+        <nav>
+            <ul>
+                <small class="small">Menu principal</small>
+                <a href="../html/home.html">
+                    <li class="path l1"> <img src="../assets/img/icons/calendar.svg" alt="icon"> Home</li>
+                </a>
+                <a href="./agendamentos.html">
+                    <li class="path l2"> <img src="../assets/img/icons/clock.svg" alt="icon"> Meus agendamentos</li>
+                </a>
+                <a href="./medicos.html">
+                    <li class="path l3"> <img src="../assets/img/icons/people.svg" alt="icon"> Médicos</li>
+                </a>
+                <a href="historico.html">
+                    <li class="path l4"> <img src="../assets/img/icons/file-earmark-text.svg" alt="icon"> Histórico</li>
+                </a>
+                <a href="./perfil.html">
+                    <li class="path l5"> <img src="../assets/img/icons/person.svg" alt="icon"> Meu Perfil</li>
+                </a>
+            </ul>
+
+            <ul>
+                <small class="small">Configurações</small>
+                <a href="./configuracoes.html">
+                    <li class="path l6"> <img src="../assets/img/icons/gear.svg" alt=""> Configurações</li>
+                </a>
+            </ul>
+        </nav>
+
         <div class="footer">
+            <hr>
+            <img src="../assets/img/userImg.jpg" alt="user image" class="userImg">
+            <div class="userInfo">
+                <h3>João Silva</h3>
+                <small class="small">Administrador</small>
+            </div>
+            <img src="../assets/img/icons/box-arrow-in-right.svg" alt="leave icon" class="icon">
+        </div>
 
+   </div>
+
+   <main>
+    <div class="header">
+        <h1>Bem-vindo à Clínica de Saúde</h1>
+        <button class="btn" id="agendarBtn"> <img src="../assets/img/icons/plus.svg" alt="plus icon" id="icon"> Agendar Consulta</button>
+    </div>
+    <div class="containerCards">
+        <div class="div nextCheckouts">
+            <div class="info">
+                <h2>Próximos Agendamentos</h2>
+                <h1 id="qntAgendamentos">3</h1>
+                <small class="small">Veja os seus próximos agendamentos</small>
+            </div>
+            <img src="../assets/img/icons/clock.svg" alt="clock icon" class="iconCard"> 
+        </div>
+        <div class="div thisMouthCheckouts">
+            <div class="info">
+                <h2>Agendamentos deste mês</h2>
+                <h1 id="qntAgendamentosMes">5</h1>
+                <small class="small">Veja os agendamentos deste mês</small>
+            </div>
+            <img src="../assets/img/icons/calendar.svg" alt="calendar icon" class="iconCard">
+        </div>
+        <div class="div favDoctors"> 
+            <div class="info">        
+                <h2>Médicos Favoritos</h2>
+                <h1 class="qntFavDoctors">5</h1>
+                <small>Médicos da sua lista</small>
+            </div>
+            <img src="../assets/img/icons/people.svg" alt="" class="iconCard">
         </div>
     </div>
-    <main>
-        
-    </main>
+    <div class="containerNextCheckouts">
+        <h2>
+            Próximas consultas
+        </h2>
+        <small>Suas consultas agendadas para os próximos dias</small>
+
+        <div class="containerCheckouts">
+            <div class="checkout n1">
+                <div class="title">
+                    <div class="circle"></div>
+                    <div class="text">
+                        <h1>DRª Maria Silva</h1>
+                        <small>Cardiologia</small>
+                    </div>
+                </div>
+                 
+                <div class="info">
+                    <div class="date">
+                        <h3>15-10-2023</h3>
+                        <small class="time">14:30</small>
+                    </div>
+                    <div class="state n1">
+                        Confirmado
+                    </div>
+                </div>
+            </div>
+            <div class="checkout n2">
+                <div class="title">
+                    <div class="circle"></div>
+                    <div class="text">
+                        <h1>DR. André Silva</h1>
+                        <small>Fisioterapia</small>
+                    </div>
+                </div>
+                 
+                <div class="info">
+                    <div class="date">
+                        <h3>17-10-2023</h3>
+                        <small class="time">16:30</small>
+                    </div>
+                    <div class="state n2">
+                        pendente
+                    </div>
+                </div>
+            </div>
+            <div class="checkout n3">
+                <div class="title">
+                    <div class="circle"></div>
+                    <div class="text">
+                        <h1>DRª Carla Pascoal</h1>
+                        <small>Oftalmologia</small>
+                    </div>
+                </div>
+                 
+                <div class="info">
+                    <div class="date">
+                        <h3>19-10-2023</h3>
+                        <small class="time">11:30</small>
+                    </div>
+                    <div class="state n3" >
+                        canclelado
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </main>
 </body>
 </html>

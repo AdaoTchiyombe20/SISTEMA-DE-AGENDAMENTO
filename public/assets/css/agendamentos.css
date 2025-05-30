@@ -1,0 +1,201 @@
+main {
+    position: fixed;
+    right: 0;
+    width: calc(100% - 300px);
+    height: 100dvh;
+    background-color: rgba(230, 230, 230, 0.315);
+
+    & .header {
+        margin-block: 30px;
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & h1 {
+            font-size: 30px;
+            margin-left: 20px;
+        }
+
+        & #agendarBtn {
+            padding-block: 13px;
+            padding-inline: 15px;
+            font-size: 14px;
+            width: 200px;
+            height: fit-content;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                background-color: rgba(128, 128, 128, 0.281);
+            }
+            
+            & #icon {
+                background-color: white;
+                margin-left: 5px;
+            }
+        }
+    }
+
+    & .containerTime{
+        width: 360px;
+        height: 45px;
+        border: 2.3px solid rgba(128, 128, 128, 0.144);
+        border-radius: 5px;
+        background-color: rgba(158, 157, 157, 0.459);
+        margin-left: 40px;
+        display: flex;
+        align-items: center;
+
+        &  p {
+            flex: 1;
+            height: 100%;
+            display: flex;  
+            align-items: center;
+            justify-content: center;
+            opacity: .5;  
+            font-weight: 600;
+            font-size: .9rem;
+        }
+
+        & #next.selected {
+            opacity: .8;
+            background-color: white;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.349);
+            font-weight: bold;
+        }
+        & #previous.selected {
+            opacity: .8;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.349);
+            font-weight: bold;
+        }
+        & #canceled.selected {
+            opacity: .8;
+            background-color: white;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.349);
+            font-weight: bold;
+        }
+
+    }
+
+    & .containerAppointments {
+        width: 95%;
+        height: 500px;
+        margin-block: 40px;
+        margin-inline: auto;
+        border-radius: 10px;
+        
+      
+
+            & .checkout {
+                width: 100%;
+                height: 100px;
+                padding: 10px;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border: 2px solid rgba(78, 78, 78, 0.315);
+                border-radius: 5px;
+                background-color: white;
+                transition: all 0.3s ease-in-out;
+
+               
+
+                & .title {
+                    display: flex;
+                    gap: 20px;
+                    
+                    & .circle {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 100%;
+                        background-color: gray;
+                    }
+
+                    & .text {
+
+                        & h1 {
+                            font-size: 20px;
+                        }
+                        & #date {
+                            font-weight: bold;
+                    }
+                }
+
+            
+
+                }
+                & .info {
+                    display: flex;
+                    gap: 15px;
+
+                     & .state  {
+                        text-align: center;
+                        width: 120px;
+                        font-size: .9rem;
+                        font-weight: bold;
+                        padding: 5px;
+                        border-radius: 100px;
+                        
+                    }
+                    & .n1 {
+                        color: green;
+                        background-color: rgba(2, 190, 2, 0.623);
+                    }
+                    & .n2 {
+                        color: rgb(255, 255, 0);
+                        background-color: rgba(218, 203, 3, 0.623);
+                    }
+                    & .n3 {
+                        color: rgb(173, 2, 2);
+                        background-color: rgba(252, 5, 5, 0.623);
+                    }
+                    & .n4 {
+                        color: rgb(2, 2, 2);
+                        background-color: rgba(136, 134, 134, 0.623);
+                    }
+
+                    & .buttons {
+                        display: flex;
+                        gap: 10px;
+
+                        & button {
+                            padding: 5px 10px;
+                            border-radius: 5px;
+                            border: none;
+                            cursor: pointer;
+                            transition: all 0.3s ease-in-out;
+
+                            &:hover {
+                                background-color: rgba(128, 128, 128, 0.281);
+                            }
+                        }
+
+                        & #cancel:hover {
+                            background-color: rgba(255, 0, 0, 0.61);
+                            color: white;
+                        }
+
+                        & #reschedule:hover {
+                            background-color: rgba(0, 128, 0, 0.637);
+                            color: white;
+                        }
+                    }
+                }
+        }
+    }
+}
