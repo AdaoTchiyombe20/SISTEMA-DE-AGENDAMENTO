@@ -31,13 +31,29 @@ Este projeto é um sistema web para agendamento de consultas online em uma clín
 ## Estrutura do Projeto
 
 ```
-/sistema de agendamento
-├── index.php
-├── config.php
-├── /assets
-├── /views
-├── /controllers
-└── /models
+meu-projeto/
+│
+├── 📁 public/              # Tudo que o navegador pode acessar diretamente
+│   ├── 📁 assets/          # CSS, JS, imagens etc.
+│   │   ├── css/
+│   │   ├── js/
+│   │   └── img/
+│   ├── 📁 html/            # Páginas HTML estáticas
+│   │   ├── index.html
+│   │   ├── contato.html
+│   │   └── sobre.html
+│   └── 📄 .htaccess        # Proteção e redirecionamentos (opcional)
+│
+├── 📁 backend/             # Lógica PHP (não acessível diretamente pelo navegador)
+│   ├── 📁 controllers/     # Scripts que processam dados (ex: login, forms)
+│   ├── 📁 config/          # Configurações (db.php, constantes, etc.)
+│   └── 📁 models/          # Comunicação com banco de dados (opcional)
+│
+├── 📁 uploads/             # Arquivos enviados pelo usuário
+│
+├── 📄 README.md            # Documentação do projeto
+└── 📄 router.php           # (Opcional) se quiser um único ponto de entrada
+
 ```
 
 ## Contribuição
