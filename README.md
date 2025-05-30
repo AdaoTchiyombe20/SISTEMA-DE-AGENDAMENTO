@@ -42,17 +42,16 @@ meu-projeto/
 │   │   ├── index.html
 │   │   ├── contato.html
 │   │   └── sobre.html
-│   └── 📄 .htaccess        # Proteção e redirecionamentos (opcional)
+│   └── 📄 .htaccess        # Proteção e redirecionamentos
 │
-├── 📁 backend/             # Lógica PHP (não acessível diretamente pelo navegador)
+├── 📁 backend/             # Lógica PHP
 │   ├── 📁 controllers/     # Scripts que processam dados (ex: login, forms)
 │   ├── 📁 config/          # Configurações (db.php, constantes, etc.)
-│   └── 📁 models/          # Comunicação com banco de dados (opcional)
+│   └── 📁 models/          # Comunicação com banco de dados 
 │
 ├── 📁 uploads/             # Arquivos enviados pelo usuário
 │
-├── 📄 README.md            # Documentação do projeto
-└── 📄 router.php           # (Opcional) se quiser um único ponto de entrada
+└── 📄 README.md            # Documentação do projeto
 
 ```
 
