@@ -61,6 +61,7 @@ main {
             display: flex;  
             align-items: center;
             justify-content: center;
+            cursor: pointer;
             opacity: .5;  
             font-weight: 600;
             font-size: .9rem;
@@ -91,9 +92,24 @@ main {
 
     }
 
-    & .containerAppointments {
+    
+    & .containerAppointments_next {
+        display: none;
+    }
+    
+    & .containerAppointments_previous  {
+        display: none;
+    }
+
+    & .containerAppointments_canceled {
+        display: none;
+    }   
+    
+    & .containerAppointments_next.selected {
+        display: block !important;
         width: 95%;
-        height: 500px;
+        height: 700px;
+        overflow-y: auto;
         margin-block: 40px;
         margin-inline: auto;
         border-radius: 10px;
@@ -191,11 +207,230 @@ main {
                         }
 
                         & #reschedule:hover {
-                            background-color: rgba(0, 128, 0, 0.637);
+                            background-color: rgba(0, 45, 128, 0.637);
                             color: white;
                         }
                     }
                 }
         }
     }
+    .containerAppointments_previous.selected {
+        display: block !important;
+        width: 95%;
+        height: 700px;
+        overflow-y: auto;
+        margin-block: 40px;
+        margin-inline: auto;
+        border-radius: 10px;
+        
+      
+
+            & .checkout {
+                width: 100%;
+                height: 100px;
+                padding: 10px;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border: 2px solid rgba(78, 78, 78, 0.315);
+                border-radius: 5px;
+                background-color: white;
+                transition: all 0.3s ease-in-out;
+
+               
+
+                & .title {
+                    display: flex;
+                    gap: 20px;
+                    
+                    & .circle {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 100%;
+                        background-color: gray;
+                    }
+
+                    & .text {
+
+                        & h1 {
+                            font-size: 20px;
+                        }
+                        & #date {
+                            font-weight: bold;
+                    }
+                }
+
+            
+
+                }
+                & .info {
+                    display: flex;
+                    gap: 15px;
+
+                     & .state  {
+                        text-align: center;
+                        width: 120px;
+                        font-size: .9rem;
+                        font-weight: bold;
+                        padding: 5px;
+                        border-radius: 100px;
+                        
+                    }
+                    & .n1 {
+                        color: green;
+                        background-color: rgba(2, 190, 2, 0.623);
+                    }
+                    & .n2 {
+                        color: rgb(255, 255, 0);
+                        background-color: rgba(218, 203, 3, 0.623);
+                    }
+                    & .n3 {
+                        color: rgb(173, 2, 2);
+                        background-color: rgba(252, 5, 5, 0.623);
+                    }
+                    & .n4 {
+                        color: rgb(2, 2, 2);
+                        background-color: rgba(136, 134, 134, 0.623);
+                    }
+
+                    & .buttons {
+                        display: flex;
+                        gap: 10px;
+
+                        & button {
+                            padding: 5px 10px;
+                            border-radius: 5px;
+                            border: none;
+                            cursor: pointer;
+                            transition: all 0.3s ease-in-out;
+
+                            &:hover {
+                                background-color: rgba(128, 128, 128, 0.281);
+                            }
+                        }
+
+                        & #cancel:hover {
+                            background-color: rgba(255, 0, 0, 0.61);
+                            color: white;
+                        }
+
+                        & #reschedule:hover {
+                            background-color: rgba(0, 45, 128, 0.637);
+                            color: white;
+                        }
+                    }
+                }
+        }
+    }
+     .containerAppointments_canceled.selected {
+        display: block !important;
+        width: 95%;
+        height: 700px;
+        overflow-y: auto;
+        margin-block: 40px;
+        margin-inline: auto;
+        border-radius: 10px;
+        
+      
+
+            & .checkout {
+                width: 100%;
+                height: 100px;
+                padding: 10px;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border: 2px solid rgba(78, 78, 78, 0.315);
+                border-radius: 5px;
+                background-color: white;
+                transition: all 0.3s ease-in-out;
+
+               
+
+                & .title {
+                    display: flex;
+                    gap: 20px;
+                    
+                    & .circle {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 100%;
+                        background-color: gray;
+                    }
+
+                    & .text {
+
+                        & h1 {
+                            font-size: 20px;
+                        }
+                        & #date {
+                            font-weight: bold;
+                    }
+                }
+
+            
+
+                }
+                & .info {
+                    display: flex;
+                    gap: 15px;
+
+                     & .state  {
+                        text-align: center;
+                        width: 120px;
+                        font-size: .9rem;
+                        font-weight: bold;
+                        padding: 5px;
+                        border-radius: 100px;
+                        
+                    }
+                    & .n1 {
+                        color: green;
+                        background-color: rgba(2, 190, 2, 0.623);
+                    }
+                    & .n2 {
+                        color: rgb(255, 255, 0);
+                        background-color: rgba(218, 203, 3, 0.623);
+                    }
+                    & .n3 {
+                        color: rgb(173, 2, 2);
+                        background-color: rgba(252, 5, 5, 0.623);
+                    }
+                    & .n4 {
+                        color: rgb(2, 2, 2);
+                        background-color: rgba(136, 134, 134, 0.623);
+                    }
+
+                    & .buttons {
+                        display: flex;
+                        gap: 10px;
+
+                        & button {
+                            padding: 5px 10px;
+                            border-radius: 5px;
+                            border: none;
+                            cursor: pointer;
+                            transition: all 0.3s ease-in-out;
+
+                            &:hover {
+                                background-color: rgba(128, 128, 128, 0.281);
+                            }
+                        }
+
+                        & #cancel:hover {
+                            background-color: rgba(255, 0, 0, 0.61);
+                            color: white;
+                        }
+
+                        & #reschedule:hover {
+                            background-color: rgba(0, 45, 128, 0.637);
+                            color: white;
+                        }
+                    }
+                }
+        }
+    }
+
 }
