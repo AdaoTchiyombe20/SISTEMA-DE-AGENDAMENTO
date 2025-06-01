@@ -55,10 +55,10 @@
             <hr>
             <img src="../assets/img/userImg.jpg" alt="user image" class="userImg">
             <div class="userInfo">
-                <h3>João Silva</h3>
-                <small class="small">Administrador</small>
+                <h3 id="userName">João Silva</h3>
+                <small class="small">paciente</small>
             </div>
-            <img src="../assets/img/icons/box-arrow-in-right.svg" alt="leave icon" class="icon">
+            <img src="../assets/img/icons/box-arrow-in-right.svg" alt="leave icon" class="icon" id="leave">
         </div>
 
    </div>
@@ -101,7 +101,7 @@
         <small>Suas consultas agendadas para os próximos dias</small>
 
         <div class="containerCheckouts">
-            <div class="checkout n1">
+            <div class="checkout confirm">
                 <div class="title">
                     <div class="circle"></div>
                     <div class="text">
@@ -115,12 +115,12 @@
                         <h3>15-10-2023</h3>
                         <small class="time">14:30</small>
                     </div>
-                    <div class="state n1">
+                    <div class="state confirm">
                         Confirmado
                     </div>
                 </div>
             </div>
-            <div class="checkout n2">
+            <div class="checkout pending">
                 <div class="title">
                     <div class="circle"></div>
                     <div class="text">
@@ -134,12 +134,12 @@
                         <h3>17-10-2023</h3>
                         <small class="time">16:30</small>
                     </div>
-                    <div class="state n2">
+                    <div class="state pending">
                         pendente
                     </div>
                 </div>
             </div>
-            <div class="checkout n3">
+            <div class="checkout canceled">
                 <div class="title">
                     <div class="circle"></div>
                     <div class="text">
@@ -153,13 +153,42 @@
                         <h3>19-10-2023</h3>
                         <small class="time">11:30</small>
                     </div>
-                    <div class="state n3" >
+                    <div class="state canceled" >
                         canclelado
+                    </div>
+                </div>
+            </div>
+            <div class="checkout confirm">
+                <div class="title">
+                    <div class="circle"></div>
+                    <div class="text">
+                        <h1>DRª Maria Silva</h1>
+                        <small>Cardiologia</small>
+                    </div>
+                </div>
+                 
+                <div class="info">
+                    <div class="date">
+                        <h3>15-10-2023</h3>
+                        <small class="time">14:30</small>
+                    </div>
+                    <div class="state confirm">
+                        Confirmado
                     </div>
                 </div>
             </div>
         </div>
     </div>
    </main>
+
+   <div class="confirmacao close" id="confirmation">
+        <div class="confirm">
+            <h1>Deseja terminar a sessão?</h1>
+            <div class="contButtons">
+                <button id="yes">sim</button>
+                <button id="no">não</button>
+            </div>
+        </div>
+   </div>
 </body>
 </html>

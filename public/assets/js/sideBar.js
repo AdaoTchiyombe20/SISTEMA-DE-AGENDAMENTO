@@ -21,3 +21,11 @@ const liElements = [
         liElements[idx].classList.add("selected");
     }
 })
+
+const userName = document.querySelector("#userName");
+
+document.addEventListener("DOMContentLoaded", ()=> {
+    const name = JSON.parse(localStorage.getItem("usuario"))
+
+    userName.innerHTML = name.nome;
+})

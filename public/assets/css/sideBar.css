@@ -96,6 +96,10 @@
 
         & .userInfo {
             width: fit-content;
+
+            & h3 {
+                font-size: 1rem;
+            }
         }
     }
 }
