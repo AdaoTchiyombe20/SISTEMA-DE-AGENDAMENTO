@@ -1,3 +1,33 @@
+const leave = document.querySelector("#leave");
+const yes = document.querySelector("#yes");
+const no = document.querySelector("#no");
+const confirmation = document.querySelector("#confirmation");
+const selectEspecialidade = document.querySelector("#selectEspecialidade");
+const btnAgendar = document.querySelector("#agendarBtn");
+const cancel = document.querySelector("#cancel");
+
+    btnAgendar.addEventListener("click", ()=> {
+        selectEspecialidade.classList.remove("close")
+    })
+
+    cancel.addEventListener("click", ()=> {
+        selectEspecialidade.classList.add("close");
+    })
+
+    leave.addEventListener("click", ()=> {
+        confirmation.classList.remove("close");
+    })
+    
+    yes.addEventListener("click", ()=> {
+        localStorage.removeItem("usuario");
+        window.location.href = "http://localhost/school/sistema%20de%20agendamento/public/html/login.html";
+    })
+        
+    no.addEventListener("click", ()=> {
+                confirmation.classList.add("close");
+    })
+
+
 const paths =  [
     {id:1, name:"home.html" },
     {id:2, name:"agendamentos.html" },
@@ -20,12 +50,4 @@ const liElements = [
     if( window.location.pathname.includes(path.name)) {
         liElements[idx].classList.add("selected");
     }
-})
-
-const userName = document.querySelector("#userName");
-
-document.addEventListener("DOMContentLoaded", ()=> {
-    const name = JSON.parse(localStorage.getItem("usuario"))
-
-    userName.innerHTML = name.nome;
 })

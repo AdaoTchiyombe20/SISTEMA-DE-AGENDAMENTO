@@ -2,7 +2,7 @@
     width: 300px;
     height: 100dvh;
     position: fixed;
-    border-right: 2px solid gray;
+    border-right: 2px solid rgba(128, 128, 128, 0.253);
     & .header {
         width: 90%;
         padding: 10px;
@@ -26,6 +26,11 @@
 
         
     }
+
+    & hr {
+        width: 95%;
+        margin-inline: auto;
+    }
     & nav {
         margin-top: 30px;
         padding-inline: 20px;
@@ -39,6 +44,8 @@
             gap: 5px;
 
             & li {
+                font-size: 1.1rem;
+                opacity: .9;
                 display: flex;
                 align-items: center;
                 gap: 5%;
@@ -53,7 +60,7 @@
 
                 &.selected {
                     background-color: rgba(128, 128, 128, 0.281);
-                    font-weight: bold;
+                    font-weight: 600;
                 }
             }
         }
@@ -72,8 +79,9 @@
         & hr {
             position: absolute;
             top: 0;
-            width: 90%;
-            font-weight: bold;
+            left: 10px;
+            width: 95%;
+            
         }
 
         & .userImg {
@@ -102,4 +110,128 @@
             }
         }
     }
+}
+
+.confirmacao {
+    width: 100vw ;
+    height: 100dvh;
+    background-color: rgba(0, 0, 0, 0.486);
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    & .confirm {
+        width: 20%;
+        height: 40%;
+        background-color: white;
+        border-radius: 20px;
+        padding: 20px;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 20px;
+
+        & h1 {
+            text-align: center;
+            margin-block: 20px;
+        }
+
+        .contButtons {
+            margin-inline: auto;
+        }
+
+        & button {
+            width: 100px;
+            height: 40px;
+            font-weight: bold;
+            color:white;
+            border: 2.3px solid rgba(128, 128, 128, 0.39);
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        & #yes {
+            background-color: red;
+        }
+
+        & #no {
+            background-color: green;
+        } 
+
+    }
+}
+
+.confirmacao.close {
+    display: none !important;
+}
+
+.selectEspecialidade {
+    width: 100%;
+    height: 100dvh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background-color: rgba(0, 0, 0, 0.486);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & form {
+        position: relative;
+        width: 25%;
+        height: 42%;
+        background-color: white;
+        border-radius: 20px;
+        padding: 20px;
+        display: flex;
+        flex-flow: column nowrap;
+
+        & h2 {
+            margin-bottom: 20px;
+        }
+
+        & #cancel {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding-inline: 5px;
+            background-color: black;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        & select {
+            width: 100%;
+            height: 45px;
+            margin-bottom: 20px;
+            opacity: .9;
+            font-size: .9rem;
+            border: 2px solid rgba(128, 128, 128, 0.329);
+            border-radius: 5px;
+            outline:none;
+        }
+
+        & button {
+            width: 100%;
+            height: 45px;
+            background-color: black;
+            border: 2px solid rgba(128, 128, 128, 0.274);
+            border-radius:5px ;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    }
+}
+
+.selectEspecialidade.close {
+    display: none;
 }

@@ -35,7 +35,7 @@ main {
             cursor: pointer;
             transition: all 0.3s ease-in-out;
             &:hover {
-                background-color: rgba(128, 128, 128, 0.281);
+                background-color: rgba(0, 0, 0, 0.795);
             }
 
             & #icon {
@@ -183,50 +183,3 @@ main {
         
 }
 
-.confirmacao {
-    width: 100vw ;
-    height: 100dvh;
-    background-color: black;
-    display: flex ;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%, -50%);
-
-    & .confirm {
-        width: 30%;
-        height: 40%;
-        background-color: white;
-        border-radius: 20px;
-        padding: 20px;
-        display: flex;
-        flex-flow: column nowrap;
-        gap: 20px;
-
-        & button {
-            width: 100px;
-            height: 40px;
-            font-weight: bold;
-            color:white;
-            border: 2.3px solid rgba(128, 128, 128, 0.39);
-            border-radius: 10px;
-            cursor: pointer;
-        }
-
-        & #yes {
-            background-color: red;
-        }
-
-        & #no {
-            background-color: green;
-        } 
-
-    }
-}
-
-.confirmacao.close {
-    display: none !important;
-}

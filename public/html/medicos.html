@@ -6,6 +6,9 @@
     <title>Agendamentos</title>
     <link rel="stylesheet" href="../assets/css/global.css">
     <link rel="stylesheet" href="../assets/css/sideBar.css">
+    <link rel="stylesheet" href="../assets/css/medicos.css">
+    <script src="../assets/js/sideBar.js" defer ></script>
+    <script src="../assets/js/medicos.js" defer></script>
 </head>
 <body>
     <div class="sideBar">
@@ -54,13 +57,77 @@
                 <h3>João Silva</h3>
                 <small class="small">Administrador</small>
             </div>
-            <img src="../assets/img/icons/box-arrow-in-right.svg" alt="leave icon" class="icon">
+            <img src="../assets/img/icons/box-arrow-in-right.svg" alt="leave icon" class="icon" id="leave">
         </div>
 
    </div>
 
    <main>
-        
+        <h1>
+            Médicos Disponíveis
+        </h1>
+
+        <div id="containerMedicos">
+
+            <div class="medico">
+                <div class="circle"></div>
+                <h2 class="nome">Dr Maria Carlos</h2>
+                <small class="especialidade">especialidade</small>
+                <p class="classificacao"> <img src="../assets/img/icons/star.png" alt="star icon"> <strong>4.50</strong></p>
+                <p>Próximo horário:  <strong class="horario"> Hoje às 17:30</strong></p>
+                <button id="agendarBtn">Agendar Consulta</button>
+            </div>
+            <div class="medico">
+                <div class="circle"></div>
+                <h2>Dr Maria Carlos</h2>
+                <small>especialidade</small>
+                <p class="classificacao"> <img src="../assets/img/icons/star.png" alt="star icon"> <strong>4.50</strong></p>
+                <p>Próximo horário:  <strong> Hoje às 17:30</strong></p>
+                <button id="agendarBtn">Agendar Consulta</button>
+            </div>
+            <div class="medico">
+                <div class="circle"></div>
+                <h2>Dr Maria Carlos</h2>
+                <small>especialidade</small>
+                <p class="classificacao"> <img src="../assets/img/icons/star.png" alt="star icon"> <strong>4.50</strong></p>
+                <p>Próximo horário:  <strong> Hoje às 17:30</strong>/p>
+                <button id="agendarBtn">Agendar Consulta</button>
+            </div>
+            <div class="medico">
+                <div class="circle"></div>
+                <h2>Dr Maria Carlos</h2>
+                <small>especialidade</small>
+                <p class="classificacao"> <img src="../assets/img/icons/star.png" alt="star icon"> <strong>4.50</strong></p>
+                <p>Próximo horário:  <strong> Hoje às 17:30</strong></p>
+                <button id="agendarBtn">Agendar Consulta</button>
+            </div>
+            <div class="medico">
+                <div class="circle"></div>
+                <h2>Dr Maria Carlos</h2>
+                <small>especialidade</small>
+                <p class="classificacao"> <img src="../assets/img/icons/star.png" alt="star icon"> <strong>4.50</strong></p>
+                <p>Próximo horário:  <strong> Hoje às 17:30</strong></p>
+                <button id="agendarBtn">Agendar Consulta</button>
+            </div>
+            <div class="medico">
+                <div class="circle"></div>
+                <h2>Dr Maria Carlos</h2>
+                <small>especialidade</small>
+                <p class="classificacao"> <img src="../assets/img/icons/star.png" alt="star icon"> <strong>4.50</strong></p>
+                <p>Próximo horário:  <strong> Hoje às 17:30</strong></p>
+                <button id="agendarBtn">Agendar Consulta</button>
+            </div>
+        </div>
    </main>
+
+    <div class="confirmacao close" id="confirmation">
+        <div class="confirm">
+            <h1>Deseja terminar a sessão?</h1>
+            <div class="contButtons">
+                <button id="yes">sim</button>
+                <button id="no">não</button>
+            </div>
+        </div>
+   </div>
 </body>
 </html>

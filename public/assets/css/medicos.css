@@ -1,0 +1,71 @@
+main {
+    position: fixed;
+    right: 0;
+    width: calc(100% - 300px);
+    height: 100dvh;
+    background-color: rgba(230, 230, 230, 0.315);
+    padding: 20px;
+
+
+    & h1 {
+        font-size: 1.8rem;
+    }
+     
+    & #containerMedicos {
+        width: 95%;
+        margin-inline: auto;
+        margin-top: 50px;
+        height: 600px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+
+        & .medico {
+            width: 370px;
+            height: 350px;
+            background-color: white;
+            border-radius: 5px;
+            border: 2.3px solid rgba(128, 128, 128, 0.288);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            flex-flow: column nowrap;
+
+            & .circle {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                margin-block: 10px;
+                background-color: rgba(128, 128, 128, 0.308);
+            }
+
+           
+
+            & small {
+                font-size: 1.1rem;
+            }
+
+            & .classificacao {
+                display: flex;
+
+                gap: 8px;
+                margin-block: 25px;
+                
+                & img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            & button {
+                width: 80%;
+                height: 40px;
+                margin-top: 10px;
+                background-color: black;
+                border-radius:5px ;
+                color: white;
+                cursor: pointer;
+            }
+
+        }
+    }
+}
